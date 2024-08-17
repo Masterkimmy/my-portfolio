@@ -1,33 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Space+Grotesk:wght@300..700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.nav__icon {
+    display: block;
+      position: relative;
+    bottom:63px;
+    
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .navigation__checkbox {
+    display: none;
   }
-}
+  .navigation__button {
+    height: 2rem /* 20px */;
+    width: 2rem;
+    position: absolute;
+    right: 2.4rem;
+    top: 4rem;
+    cursor: pointer;
+    z-index: 50;
+  }
+  .navigation__icon {
+    position: relative;
+    width: 1.5rem;
+    height: 1px;
+    background: #fff;
+    display: inline-block;
+  }
+  .navigation__icon::before,
+  .navigation__icon::after {
+    width: 2rem;
+    height: 1px;
+    background: #fff;
+    display: inline-block;
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+  }
+  .navigation__icon::before {
+    top: -0.4rem;
+  }
+  .navigation__icon::after {
+    top: 0.4rem;
+  }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon {
+    background: transparent;
+  }
+
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::before,.navigation__checkbox:checked + .navigation__button .navigation__icon::after  {
+    background-color: #000;
+  }
+  .navigation__checkbox:checked
+    + .navigation__button
+    .navigation__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
