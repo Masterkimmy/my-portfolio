@@ -9,6 +9,9 @@
     bottom:63px;
     
   }
+  .chrismi{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
   .navigation__checkbox {
     display: none;
   }

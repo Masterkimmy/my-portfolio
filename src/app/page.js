@@ -16,7 +16,6 @@ const page = () => {
       <Stuff/>
       <Contact/>
       <Footer />
-      {/* <Nav/> */}
     </div>
   );
 }

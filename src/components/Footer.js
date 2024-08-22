@@ -6,27 +6,29 @@ const Footer = () => {
     const [date] = useState(new Date().getFullYear())
   return (
     <div>
-      <div className="bg-[#3D155F] h-[100vh] flex flex-col  justify-center gap-20 p-32">
-        <div className="flex gap-20">
+      <div className="bg-[#3D155F] h-[100vh] flex flex-col  justify-center gap-20 p-32 max-sm:pl-10">
+        <div className="flex gap-20 max-sm:flex-col max-sm:gap-5">
           <div className="flex gap-3 flex-col cursor-pointer">
-            <h3 className="text-[#7A6398] font-bold">Say Hello</h3>
-            <h3 className="text-[#B3D175] font-bold">
+            <h3 className="text-[#7A6398] font-bold chrismi">Say Hello</h3>
+            <h3 className="text-[#B3D175] font-bold chrismi">
               <a href="mailto:hakeemkolawole62@gmail.com">hello@Kimmy.dev</a>{" "}
             </h3>
-            <h3 className="text-[#B3D175] font-bold">
+            <h3 className="text-[#B3D175] font-bold chrismi">
               <a href="https://t.me/arrabenjamin">t.me/kimmy</a>
             </h3>
           </div>
-          <div className="flex gap-3 flex-col mt-8 cursor-pointer">
+          <div className="flex gap-3 flex-col mt-8 cursor-pointer chrismi">
             <h3 className="text-[#B3D175] font-bold">My Work</h3>
             <h3 className="text-[#B3D175] font-bold">My Shelf</h3>
             <h3 className="text-[#B3D175] font-bold">My Résumé</h3>
           </div>
         </div>
-        <div className="w-full h-[2px] bg-[#B3D175]"></div>
+        <div className="w-full h-[2px] bg-[#B3D175] max-sm:w-[80vw] text-purple-950">
+          sdfghjkl;dxfcgvhjkl;aesxdrgvybuhjnimkolp,;
+        </div>
         <div className="flex justify-between">
-          <h1 className="text-[#B3D175] font-bold">© Master kimmy {date}</h1>
-          <div className="flex gap-4 cursor-pointer">
+          <h1 className="text-[#B3D175] font-bold chrismi">© Master kimmy {date}</h1>
+          <div className="flex gap-4 cursor-pointer max-sm:hidden">
             <h1 className="text-[#B3D175] font-bold">
               <a href="https://twitter.com/@kolawole60867">TW</a>
             </h1>

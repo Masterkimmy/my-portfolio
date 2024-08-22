@@ -40,64 +40,64 @@ const Contact = () => {
     }
 
   return (
-    <div className="h-[100vh] flex flex-col items-center justify-center gap-16 p-8">
+    <div className="h-[100vh] flex flex-col items-center justify-center gap-16 p-8 ">
       <div className="flex flex-col items-center justify-center">
-        <h1 className="text-[#4831D4] font-extrabold text-[50px]">
-          {" "}
+        <h1 className="text-[#4831D4] font-extrabold text-[50px] max-sm:text-[40px] max-sm:pl-7 chrismi">
           Send me a message!
         </h1>
-        <h3 className="text-[#3D155F] font-semibold w-[23vw] text-center">
-          Got a question or proposal, or just want to say hello? Go ahead.{" "}
+        <h3 className="text-[#3D155F] font-semibold w-[23vw] text-center max-sm:w-[73vw] max-sm:text-start max-sm:pl-2 chrismi ">
+          Got a question or proposal, or just want to say hello? Go ahead.
         </h3>
       </div>
       <form
         onSubmit={submitForm}
-        className="flex flex-col gap-16 items-center "
+        className="flex flex-col gap-16 items-center max-sm:gap-8 max-sm:pr-6"
       >
-        <div className="flex gap-[10vw] ">
+        <div className="flex gap-[10vw] max-sm:flex-col ">
           <div className="flex  flex-col gap-2 ">
-            <h3 className="text-[#D5ADCC] font-light">your Name</h3>
+            <h3 className="text-[#D5ADCC] font-light chrismi">your Name</h3>
             <input
-            //   required
+              //   required
               name="name"
               onChange={(e) => setName(e.target.value)}
               type="text"
               placeholder="Enter your name"
               className="font-light outline-none"
             />
-            <div className="w-[25vw] h-[2px] bg-[#9B87AC]"></div>
+            <div className="w-[25vw] h-[2px] bg-[#9B87AC] max-sm:w-[65vw]"></div>
           </div>
           <div className="flex  flex-col gap-2">
-            <h3 className="text-[#D5ADCC] font-light">Email Address</h3>
+            <h3 className="text-[#D5ADCC] font-light chrismi">Email Address</h3>
             <input
-            //   required
+              //   required
               name="email"
               onChange={(e) => setEmail(e.target.value)}
               type="email"
               placeholder="Enter your email address"
               className="font-light outline-none "
             />
-            <div className="w-[25vw] h-[2px] bg-[#9B87AC]"></div>
+            <div className="w-[25vw] h-[2px] bg-[#9B87AC] max-sm:w-[65vw]"></div>
           </div>
         </div>
         <div className="flex flex-col gap-2">
-          <h3 className="text-[#D5ADCC] font-light">your message</h3>
+          <h3 className="text-[#D5ADCC] font-light chrismi">your message</h3>
           <textarea
             // required
             name="message"
             onChange={(e) => setMessage(e.target.value)}
-            className="resize-none border-none w-[47vw] font-light outline-none"
+            className="resize-none border-none w-[47vw] font-light outline-none max-sm:w-[50vw]"
             typeof=""
             placeholder="Hi i think we need a design system for our produt at company x. How soon can you hop on to discuss this"
           />
-          <div className="w-[60vw] h-[2px] bg-[#9B87AC]"></div>
+          <div className="w-[60vw] h-[2px] bg-[#9B87AC] max-sm:w-[65vw]"></div>
         </div>
-        <div className="border-[2px] border-blue-700 w-[15vw] flex items-center justify-center">
-          <button  className=" w-[0vw]  hover:w-[15vw]  transition-all duration-300 overflow-visible flex items-center justify-center gap-2 bg-blue-700">
-            <div className="flex items-center justify-center text-blue-700 p-[10px] hover:text-white gap-3">
-              {send ?   "SENDING ..." :  <div className='flex items-center gap-6'> SHOOT <HiArrowLongRight /> </div>}
-                <ToastContainer /> 
-            </div>
+        <div className="border-[2px] border-blue-700 w-[15vw] flex items-center justify-center max-sm:w-[50vw]">
+          <button className=" w-[0vw]  hover:w-[15vw]  transition-all duration-300 overflow-visible flex items-center justify-center gap-2 bg-blue-700 max-sm:hover:w-[50vw]">
+            <div className="flex items-center justify-center text-blue-700 p-[10px] hover:text-white gap-3 ">
+              {send ? (
+                "SENDING ..."
+              ) : (
+                <div className="flex items-center gap-6 chrismi">SHOOT <HiArrowLongRight /></div> )}<ToastContainer /></div>
           </button>
         </div>
       </form>
